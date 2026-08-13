@@ -9,7 +9,7 @@
  * Do not put a Last.fm account password or other secret here.
  */
 window.LASTFM_CONFIG = {
-  username: "YOUR_LASTFM_USERNAME",
-  apiKey: "YOUR_LASTFM_API_KEY",
+  username: "Obstagoon2",
+  apiKey: "428a61d8f8e930875165623889e568cb",
   refreshInterval: 30000
 };
