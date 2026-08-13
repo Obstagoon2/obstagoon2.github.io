@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Zakk Jackson — student, engineer, robotics builder, programmer, and team leader.">
+  <title>Zakk Jackson — Engineer & Builder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background-grid"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Zakk Jackson home">
+      <span class="brand-mark">ZJ</span>
+      <span>Zakk Jackson</span>
+    </a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#robotics">Robotics</a>
+      <a href="#projects">Projects</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> BUILDING THINGS THAT MOVE</p>
+        <h1>Zakk<br><span>Jackson</span></h1>
+        <p class="hero-subtitle">
+          Student engineer, robotics builder, programmer, and team leader.
+          I like turning ideas into robots, software, and systems that actually work.
+        </p>
+
+        <div class="hero-links">
+          <a class="button primary" href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a>
+          <a class="button" href="https://www.linkedin.com/in/zakk-jackson/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a class="button" href="https://www.chiefdelphi.com/u/zakk_j/activity/topics" target="_blank" rel="noopener">Chief Delphi ↗</a>
+        </div>
+      </div>
+
+      <aside class="now-playing-card" id="now-playing" aria-live="polite">
+        <div class="card-label">
+          <span class="music-bars"><i></i><i></i><i></i><i></i></span>
+          LAST.FM
+        </div>
+        <div class="now-playing-content">
+          <div class="album-art-wrap">
+            <img id="album-art" src="" alt="" hidden>
+            <div id="album-placeholder" class="album-placeholder">♪</div>
+          </div>
+          <div class="track-info">
+            <span class="track-state" id="track-state">NOT LISTENING</span>
+            <h2 id="track-name">Nothing playing</h2>
+            <p id="artist-name">Last.fm status will appear here</p>
+          </div>
+        </div>
+        <a id="lastfm-link" class="card-link" href="https://www.last.fm/" target="_blank" rel="noopener">View on Last.fm ↗</a>
+      </aside>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="section-heading">
+        <span class="section-number">01</span>
+        <h2>About</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-main">
+          <p class="lead">
+            I'm a high-school student who spends a questionable amount of time
+            building robots, writing software, and figuring out why the thing
+            I just built isn't working.
+          </p>
+          <p>
+            My main home is FIRST Robotics. I've worked across FRC and FTC,
+            moving between mechanical design, programming, scouting, strategy,
+            outreach, and team leadership. I enjoy the engineering itself,
+            but I especially like building systems that help an entire team
+            work better.
+          </p>
+          <p>
+            Outside robotics, I work on software and electronics projects,
+            compete in 4-H, experiment with web development, and generally
+            find excuses to automate things that probably could have stayed manual.
+          </p>
+        </div>
+
+        <div class="facts">
+          <div class="fact">
+            <span>Focus</span>
+            <strong>Robotics & Engineering</strong>
+          </div>
+          <div class="fact">
+            <span>Teams</span>
+            <strong>FRC 1912 · FTC 8956 · FTC 27406</strong>
+          </div>
+          <div class="fact">
+            <span>Interests</span>
+            <strong>Mechanical Design · Software · Electronics</strong>
+          </div>
+          <div class="fact">
+            <span>Currently</span>
+            <strong>Building, competing, and learning</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section robotics" id="robotics">
+      <div class="section-heading">
+        <span class="section-number">02</span>
+        <h2>Robotics</h2>
+      </div>
+
+      <div class="robotics-grid">
+        <article class="robot-card featured">
+          <div class="robot-top">
+            <span class="robot-number">FRC 1912</span>
+            <span class="robot-role">COMBUSTION</span>
+          </div>
+          <h3>FRC 1912 Combustion</h3>
+          <p>
+            My primary FRC team. I've grown from a new team member into an
+            engineering and program leader, working on the robot, scouting,
+            pit operations, organization, and team execution.
+          </p>
+          <div class="tag-row">
+            <span>Engineering</span><span>Scouting</span><span>Leadership</span><span>Strategy</span>
+          </div>
+        </article>
+
+        <article class="robot-card">
+          <div class="robot-top">
+            <span class="robot-number">FTC 8956</span>
+            <span class="robot-role">PYROGEN</span>
+          </div>
+          <h3>FTC 8956 Pyrogen</h3>
+          <p>
+            FTC experience spanning robot construction, programming,
+            competition strategy, and helping develop the broader robotics
+            program.
+          </p>
+          <div class="tag-row">
+            <span>FTC</span><span>Build</span><span>Programming</span>
+          </div>
+        </article>
+
+        <article class="robot-card">
+          <div class="robot-top">
+            <span class="robot-number">FTC 27406</span>
+            <span class="robot-role">IMPULSE</span>
+          </div>
+          <h3>FTC 27406 Impulse</h3>
+          <p>
+            Helped develop a newer FTC program while taking on a larger
+            technical and leadership role as the team matured.
+          </p>
+          <div class="tag-row">
+            <span>Leadership</span><span>FTC</span><span>Engineering</span>
+          </div>
+        </article>
+
+        <article class="robot-card">
+          <div class="robot-top">
+            <span class="robot-number">PAST</span>
+            <span class="robot-role">FTC 13017</span>
+          </div>
+          <h3>Event Horizon</h3>
+          <p>
+            Earlier FTC experience that helped build the foundation for my
+            current work in robotics.
+          </p>
+          <div class="tag-row">
+            <span>FTC</span><span>Experience</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section projects" id="projects">
+      <div class="section-heading">
+        <span class="section-number">03</span>
+        <h2>Things I've Built</h2>
+      </div>
+
+      <div class="project-list">
+        <article class="project">
+          <div class="project-index">01</div>
+          <div>
+            <p class="project-type">ROBOTICS / SOFTWARE</p>
+            <h3>Scouting Systems</h3>
+            <p>
+              Built and organized scouting workflows for FRC competition,
+              including forms, data collection, organization, and the systems
+              needed to turn match observations into useful strategy.
+            </p>
+            <div class="tag-row"><span>FRC</span><span>Scouting</span><span>Data</span><span>Strategy</span></div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-index">02</div>
+          <div>
+            <p class="project-type">FTC / MECHANICAL</p>
+            <h3>Modified FTC Everybot</h3>
+            <p>
+              Experimented with a low-resource FTC Everybot design, including
+              mechanical changes such as belt-and-pulley transmission concepts,
+              additional bearings, sensing, vision, and weight reduction.
+            </p>
+            <div class="tag-row"><span>CAD</span><span>Mechanical</span><span>FTC</span></div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-index">03</div>
+          <div>
+            <p class="project-type">WEB / TEAM INFRASTRUCTURE</p>
+            <h3>Team 1912 Website</h3>
+            <p>
+              Developed and maintained web infrastructure for FRC 1912,
+              including team information, programs, outreach, events,
+              robots, sponsors, and dynamic event content.
+            </p>
+            <div class="tag-row"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub</span></div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-index">04</div>
+          <div>
+            <p class="project-type">EMBEDDED / ELECTRONICS</p>
+            <h3>M5Dial Projects</h3>
+            <p>
+              Designed embedded projects around the M5Stack Dial, including
+              touchscreen and rotary input, Wi-Fi, RTC/timekeeping, alarms,
+              non-blocking application logic, and device UI.
+            </p>
+            <div class="tag-row"><span>ESP32</span><span>Arduino</span><span>M5Stack</span><span>UI</span></div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-index">05</div>
+          <div>
+            <p class="project-type">ROBOTICS / LEADERSHIP</p>
+            <h3>Competition Operations</h3>
+            <p>
+              Worked on pit organization, scouting leadership, competition
+              preparation, task coordination, and keeping the engineering side
+              of a large FRC team moving during events.
+            </p>
+            <div class="tag-row"><span>Leadership</span><span>FRC</span><span>Operations</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section achievements" id="achievements">
+      <div class="section-heading">
+        <span class="section-number">04</span>
+        <h2>Achievements</h2>
+      </div>
+
+      <div class="achievement-grid">
+        <div class="achievement">
+          <span class="achievement-value">2×</span>
+          <span class="achievement-title">FIRST Leadership Award Finalist</span>
+          <span class="achievement-detail">FTC / FIRST</span>
+        </div>
+        <div class="achievement">
+          <span class="achievement-value">FRC</span>
+          <span class="achievement-title">Engineering Leadership</span>
+          <span class="achievement-detail">Team 1912 Combustion</span>
+        </div>
+        <div class="achievement">
+          <span class="achievement-value">FTC</span>
+          <span class="achievement-title">Program Leadership</span>
+          <span class="achievement-detail">Teams 8956 & 27406</span>
+        </div>
+        <div class="achievement">
+          <span class="achievement-value">4-H</span>
+          <span class="achievement-title">Community & Leadership</span>
+          <span class="achievement-detail">St. Tammany Parish</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section activity">
+      <div class="section-heading">
+        <span class="section-number">05</span>
+        <h2>Elsewhere</h2>
+      </div>
+      <div class="activity-grid">
+        <a class="activity-card" href="https://www.chiefdelphi.com/u/zakk_j/activity/topics" target="_blank" rel="noopener">
+          <span class="activity-icon">CD</span>
+          <div>
+            <strong>Chief Delphi</strong>
+            <p>Robotics discussions, projects, build ideas, and competition experience.</p>
+          </div>
+          <span class="arrow">↗</span>
+        </a>
+        <a class="activity-card" href="https://www.linkedin.com/in/zakk-jackson/" target="_blank" rel="noopener">
+          <span class="activity-icon">in</span>
+          <div>
+            <strong>LinkedIn</strong>
+            <p>Professional experience, leadership, and accomplishments.</p>
+          </div>
+          <span class="arrow">↗</span>
+        </a>
+        <a class="activity-card" href="https://github.com/" target="_blank" rel="noopener">
+          <span class="activity-icon">&lt;/&gt;</span>
+          <div>
+            <strong>GitHub</strong>
+            <p>Code, experiments, websites, and robotics software.</p>
+          </div>
+          <span class="arrow">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="contact-box">
+        <p class="eyebrow">LET'S BUILD SOMETHING</p>
+        <h2>Have a project worth making?</h2>
+        <p>
+          I'm always interested in robotics, engineering, software, and
+          projects that involve figuring out how to make something work.
+        </p>
+        <div class="hero-links">
+          <a class="button primary" href="https://www.linkedin.com/in/zakk-jackson/" target="_blank" rel="noopener">Find me on LinkedIn ↗</a>
+          <a class="button" href="https://www.chiefdelphi.com/u/zakk_j/activity/topics" target="_blank" rel="noopener">Chief Delphi ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© <span id="year"></span> Zakk Jackson</span>
+    <span>Built with HTML, CSS & JavaScript.</span>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
