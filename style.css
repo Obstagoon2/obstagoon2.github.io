@@ -823,6 +823,259 @@ nav a:hover {
 
 
 /* =========================================================
+   4-H COMPETITION HISTORY
+   ========================================================= */
+
+.fourh-intro {
+  max-width: 760px;
+
+  margin-bottom: 45px;
+}
+
+.fourh-intro p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.fourh-timelines {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 16px;
+}
+
+.fourh-timeline {
+  padding: 28px;
+
+  border: 1px solid var(--line);
+  border-radius: 10px;
+
+  background: var(--panel);
+}
+
+.fourh-timeline-header {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+
+  gap: 15px;
+
+  align-items: start;
+
+  padding-bottom: 25px;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.fourh-icon {
+  display: grid;
+  place-items: center;
+
+  width: 48px;
+  height: 48px;
+
+  border: 1px solid var(--line);
+  border-radius: 8px;
+
+  color: var(--accent);
+
+  background: rgba(76, 201, 240, 0.035);
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.fourh-timeline-header h3 {
+  margin: 2px 0 5px;
+
+  font-size: 21px;
+
+  letter-spacing: -0.025em;
+}
+
+.fourh-timeline-header p:not(.project-type) {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+
+/* Individual timeline entries */
+
+.fourh-entry {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 65px 1fr;
+
+  gap: 20px;
+
+  padding: 27px 0 27px 0;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.fourh-entry:last-child {
+  border-bottom: 0;
+
+  padding-bottom: 3px;
+}
+
+.fourh-entry:first-of-type {
+  padding-top: 30px;
+}
+
+.fourh-year {
+  color: var(--accent);
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  font-weight: 600;
+
+  padding-top: 2px;
+}
+
+.fourh-entry-content {
+  position: relative;
+
+  padding-left: 18px;
+
+  border-left: 1px solid #303840;
+}
+
+.fourh-entry-content::before {
+  content: "";
+
+  position: absolute;
+
+  left: -4px;
+  top: 3px;
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: var(--bg);
+
+  border: 1px solid var(--accent);
+
+  box-shadow:
+    0 0 0 4px var(--panel);
+}
+
+.fourh-entry-content h4 {
+  margin: 0 0 10px;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.fourh-entry-content ul {
+  margin: 0;
+  padding-left: 16px;
+
+  color: var(--muted);
+
+  font-size: 12px;
+}
+
+.fourh-entry-content li {
+  margin-bottom: 6px;
+
+  padding-left: 2px;
+}
+
+.fourh-entry-content li:last-child {
+  margin-bottom: 0;
+}
+
+.fourh-entry-content strong {
+  color: var(--text);
+
+  font-weight: 600;
+}
+
+.fourh-entry-content > p {
+  margin: 13px 0 0;
+
+  color: var(--dim);
+
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   FIRST EVENT SERVICE
+   ========================================================= */
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 12px;
+}
+
+.service-card {
+  display: grid;
+  grid-template-columns: 55px 1fr;
+
+  gap: 16px;
+
+  padding: 22px;
+
+  border: 1px solid var(--line);
+  border-radius: 9px;
+
+  background: var(--panel);
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.service-card:hover {
+  background: var(--panel-hover);
+
+  border-color: #37414a;
+
+  transform: translateY(-2px);
+}
+
+.service-year {
+  color: var(--accent);
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.service-card h3 {
+  margin: 3px 0 8px;
+
+  font-size: 17px;
+}
+
+.service-card p:not(.project-type) {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
    ACHIEVEMENTS
    ========================================================= */
 
@@ -1065,6 +1318,18 @@ nav a:hover {
     grid-template-columns: 1fr;
   }
 
+  @media (max-width: 950px) {
+
+  .fourh-timelines {
+    grid-template-columns: 1fr;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
 }
 
 
@@ -1137,6 +1402,41 @@ nav a:hover {
 
     gap: 8px;
   }
+
+  @media (max-width: 700px) {
+
+  .fourh-timeline {
+    padding: 22px;
+  }
+
+  .fourh-timeline-header {
+    grid-template-columns: 40px 1fr;
+  }
+
+  .fourh-icon {
+    width: 40px;
+    height: 40px;
+
+    font-size: 11px;
+  }
+
+  .fourh-entry {
+    grid-template-columns: 48px 1fr;
+
+    gap: 12px;
+  }
+
+  .fourh-entry-content {
+    padding-left: 14px;
+  }
+
+  .service-card {
+    grid-template-columns: 48px 1fr;
+
+    padding: 18px;
+  }
+
+}
 
 }
 
