@@ -2,7 +2,7 @@ const leadership = [
   {
     year: "2026–27",
     organization: "FRC 1912 Combustion",
-    role: "Vice Captain",
+    role: "Vice Captain & FTC Program Captain",
     description: "Helping lead the team while coordinating technical work, competition preparation, and student leadership."
   },
   {
