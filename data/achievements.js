@@ -5,21 +5,6 @@ const achievements = [
     description: "FIRST Tech Challenge recognition."
   },
   {
-    value: "1st",
-    title: "FRC Regional Winner",
-    description: "2024 Bayou Regional."
-  },
-  {
-    value: "1st",
-    title: "FRC Regional Winner",
-    description: "2024 Magnolia Regional."
-  },
-  {
-    value: "Award",
-    title: "Team Sustainability Recognition",
-    description: "2024 Magnolia Regional team sustainability award."
-  },
-  {
     value: "4-H",
     title: "Emerald Achievement Award",
     description: "Parish-wide recognition for sustained club work, leadership, projects, and participation."
