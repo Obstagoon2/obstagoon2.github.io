@@ -8,11 +8,11 @@
  * browser/API model allows this, but do not put passwords or private secrets here.
  */
 const LASTFM_CONFIG = {
-  apiKey: "YOUR_API_KEY",
-  username: "YOUR_LASTFM_USERNAME"
+  apiKey: "428a61d8f8e930875165623889e568cb",
+  username: "Obstagoon2",
 };
 
 const SITE_CONFIG = {
-  contactEmail: "zakk@example.com",
+  contactEmail: "zakkljackson@gmail.com",
   refreshMs: 30000
 };
