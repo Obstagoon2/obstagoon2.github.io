@@ -1,15 +1,18 @@
 /*
- * Last.fm configuration
+ * Site configuration.
  *
- * Replace the two placeholder values below.
- * Your Last.fm username is public.
+ * Put your Last.fm API key and username here.
+ * This file is intentionally separate from the page layout.
  *
- * Last.fm API keys are identifiers rather than passwords, but because this
- * is a static GitHub Pages site the key will be visible in the browser.
- * Do not put a Last.fm account password or other secret here.
+ * NOTE: A client-side Last.fm API key is visible to visitors. Last.fm's
+ * browser/API model allows this, but do not put passwords or private secrets here.
  */
-window.LASTFM_CONFIG = {
-  username: "Obstagoon2",
-  apiKey: "428a61d8f8e930875165623889e568cb",
-  refreshInterval: 30000
+const LASTFM_CONFIG = {
+  apiKey: "YOUR_API_KEY",
+  username: "YOUR_LASTFM_USERNAME"
+};
+
+const SITE_CONFIG = {
+  contactEmail: "zakk@example.com",
+  refreshMs: 30000
 };

@@ -3,1286 +3,172 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Zakk Jackson — student, engineer, robotics builder, programmer, and team leader.">
-  <title>Zakk Jackson — Engineer & Builder</title>
+  <meta name="description" content="Zakk Jackson — engineering, robotics, software, competition, and leadership portfolio.">
+  <meta name="theme-color" content="#080a0d">
+  <title>Zakk Jackson | Engineering • Robotics • Software</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link
-  rel="icon"
-  type="image/svg+xml"
-  href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='1' y='1' width='62' height='62' rx='11' fill='%23080A0D' stroke='%23232930' stroke-width='1.5'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-family='JetBrains Mono,monospace' font-size='32' font-weight='500' fill='%234AC2E8'%3EZJ%3C/text%3E%3C/svg%3E"
-  >
+  <link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml">
 </head>
-
 <body>
-  <div class="background-grid"></div>
+  <div class="grid-bg" aria-hidden="true"></div>
 
   <header class="site-header">
     <a class="brand" href="#top" aria-label="Zakk Jackson home">
       <span class="brand-mark">ZJ</span>
-      <span>Zakk Jackson</span>
+      <span class="brand-name">Zakk Jackson</span>
     </a>
 
-    <nav>
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" aria-label="Primary navigation">
       <a href="#about">About</a>
       <a href="#robotics">Robotics</a>
       <a href="#projects">Projects</a>
       <a href="#leadership">Leadership</a>
+      <a href="#four-h">4-H</a>
       <a href="#achievements">Achievements</a>
-      <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main id="top">
-
-    <!-- HERO -->
-    <section class="hero section">
+    <section class="hero section-shell">
       <div class="hero-copy">
-        <p class="eyebrow">
-          <span class="status-dot"></span>
-          BUILDING THINGS THAT MOVE
+        <p class="eyebrow">STUDENT ENGINEER / ROBOTICS / SOFTWARE</p>
+        <h1>Zakk<br><span>JACKSON</span></h1>
+        <p class="hero-tagline">Engineering <b>•</b> Robotics <b>•</b> Software <b>•</b> Leadership</p>
+        <p class="hero-description">
+          I build robots, software, and systems—and then spend an unreasonable amount of time
+          figuring out why they aren't working. My experience sits at the intersection of
+          engineering, competition, and leadership.
         </p>
-
-        <h1>
-          Zakk<br>
-          <span>Jackson</span>
-        </h1>
-
-        <p class="hero-subtitle">
-          Student engineer, robotics builder, programmer, and team leader.
-          I like turning ideas into robots, software, and systems that actually work.
-        </p>
-
         <div class="hero-links">
-          <a class="button primary"
-             href="https://github.com/"
-             target="_blank"
-             rel="noopener">
-            GitHub ↗
-          </a>
-
-          <a class="button"
-             href="https://www.linkedin.com/in/zakk-jackson/"
-             target="_blank"
-             rel="noopener">
-            LinkedIn ↗
-          </a>
-
-          <a class="button"
-             href="https://www.chiefdelphi.com/u/zakk_j/summary"
-             target="_blank"
-             rel="noopener">
-            Chief Delphi ↗
-          </a>
+          <a class="button button-primary" href="https://github.com/Obstagoon2" target="_blank" rel="noopener">GitHub <span>↗</span></a>
+          <a class="button" href="https://www.linkedin.com/in/zakk-jackson/" target="_blank" rel="noopener">LinkedIn <span>↗</span></a>
+          <a class="button" href="https://www.chiefdelphi.com/u/zakk_j/summary" target="_blank" rel="noopener">Chief Delphi <span>↗</span></a>
+          <a class="button" href="mailto:zakk@example.com">Contact <span>↗</span></a>
         </div>
       </div>
 
-      <!-- LAST.FM -->
-      <aside class="now-playing-card" id="now-playing" aria-live="polite">
-        <div class="card-label">
-          <span class="music-bars">
-            <i></i>
-            <i></i>
-            <i></i>
-            <i></i>
-          </span>
-          LAST.FM
-        </div>
-
-        <div class="now-playing-content">
-          <div class="album-art-wrap">
-            <img id="album-art" src="" alt="" hidden>
-            <div id="album-placeholder" class="album-placeholder">♪</div>
-          </div>
-
-          <div class="track-info">
-            <span class="track-state" id="track-state">
-              NOT LISTENING
-            </span>
-
-            <h2 id="track-name">
-              Nothing playing
-            </h2>
-
-            <p id="artist-name">
-              Last.fm status will appear here
-            </p>
+      <aside class="now-playing panel" aria-live="polite">
+        <div class="panel-label"><span class="status-dot"></span> NOW PLAYING</div>
+        <div id="now-playing-content" class="now-playing-content">
+          <div class="album-art placeholder-art" aria-hidden="true">♫</div>
+          <div>
+            <p class="music-state">CONNECTING</p>
+            <h2>Loading track…</h2>
+            <p class="music-artist">Last.fm</p>
           </div>
         </div>
-
-        <a
-          id="lastfm-link"
-          class="card-link"
-          href="https://www.last.fm/"
-          target="_blank"
-          rel="noopener">
-          View on Last.fm ↗
-        </a>
       </aside>
     </section>
 
-
-    <!-- ABOUT -->
-    <section class="section about" id="about">
-      <div class="section-heading">
-        <span class="section-number">01</span>
-        <h2>About</h2>
-      </div>
-
+    <section id="about" class="content-section section-shell">
+      <div class="section-heading"><span>01</span><h2>About</h2></div>
       <div class="about-grid">
-        <div class="about-main">
-
-          <p class="lead">
-            I'm a high-school student who spends a questionable amount of time
-            building robots, writing software, and figuring out why the thing
-            I just built isn't working.
-          </p>
-
+        <div class="about-lead">
+          <p class="section-kicker">WHO I AM</p>
+          <h3>Building things is the common thread.</h3>
           <p>
-            My main home is FIRST Robotics. I've worked across FRC and FTC,
-            moving between mechanical design, programming, driving, scouting,
-            strategy, outreach, and team leadership. I enjoy the engineering
-            itself, but I especially like building systems that help an
-            entire team work better.
+            I'm a high-school student focused on engineering, robotics, software, electronics,
+            competition, and leadership. I like projects where the answer isn't obvious and
+            where the finished system has to work in the real world.
           </p>
-
           <p>
-            Outside robotics, I am heavily involved in 4-H, where I've held
-            club leadership positions ranging from treasurer to president.
-            I've also built physical projects for our club's outreach booths,
-            including a flyer dispensing box and an animatronic display.
+            My experience spans FRC, FTC, 4-H, software development, mechanical and electrical
+            work, competition, event operations, and team leadership.
           </p>
-
-          <p>
-            I also enjoy software and electronics projects, web development,
-            competition strategy, music, and finding excuses to automate
-            things that probably could have stayed manual.
-          </p>
-
         </div>
-
-        <div class="facts">
-
-          <div class="fact">
-            <span>Focus</span>
-            <strong>Robotics & Engineering</strong>
-          </div>
-
-          <div class="fact">
-            <span>Robotics</span>
-            <strong>FRC 1912 · FTC 8956 · FTC 27406</strong>
-          </div>
-
-          <div class="fact">
-            <span>Leadership</span>
-            <strong>Engineering · Competition · 4-H</strong>
-          </div>
-
-          <div class="fact">
-            <span>Interests</span>
-            <strong>Mechanical Design · Software · Electronics</strong>
-          </div>
-
+        <div class="about-points">
+          <article><span>01</span><h3>Engineering</h3><p>Mechanical, electrical, software, CAD, fabrication, and systems thinking.</p></article>
+          <article><span>02</span><h3>FIRST</h3><p>FRC and FTC competition experience plus volunteering at FLL events.</p></article>
+          <article><span>03</span><h3>4-H</h3><p>Shooting sports, poultry showmanship, service, outreach, projects, and club leadership.</p></article>
+          <article><span>04</span><h3>Leadership</h3><p>Taking responsibility for people, processes, event operations, and technical systems.</p></article>
         </div>
       </div>
     </section>
 
-
-    <!-- ROBOTICS -->
-    <section class="section robotics" id="robotics">
-
-      <div class="section-heading">
-        <span class="section-number">02</span>
-        <h2>Robotics</h2>
-      </div>
-
-      <div class="robotics-grid">
-
-        <!-- FRC 1912 -->
-        <article class="robot-card featured">
-
-          <div class="robot-top">
-            <span class="robot-number">FRC 1912</span>
-            <span class="robot-role">COMBUSTION</span>
-          </div>
-
-          <h3>FRC 1912 Combustion</h3>
-
-          <p>
-            My primary FRC team. I joined for the 2024–25 REEFSCAPE season
-            and have taken on increasingly significant competition and
-            engineering leadership roles.
-          </p>
-
-          <p>
-            During the 2024–25 season I served as Drive Coach. In 2025–26,
-            I became Vice Captain of Engineering while also serving as
-            Pit Captain and Safety Captain at all three competitions.
-          </p>
-
-          <div class="tag-row">
-            <span>Engineering</span>
-            <span>Drive Coach</span>
-            <span>Pit Captain</span>
-            <span>Safety</span>
-            <span>Leadership</span>
-          </div>
-
-        </article>
-
-
-        <!-- FTC 27406 -->
-        <article class="robot-card">
-
-          <div class="robot-top">
-            <span class="robot-number">FTC 27406</span>
-            <span class="robot-role">IMPULSE</span>
-          </div>
-
-          <h3>FTC 27406 Impulse</h3>
-
-          <p>
-            Served as team captain for both the 2024–25 and 2025–26 seasons.
-            I was the team's driver during 2024–25 and moved into the
-            Drive Coach role for 2025–26.
-          </p>
-
-          <div class="tag-row">
-            <span>Captain</span>
-            <span>Drive Coach</span>
-            <span>Driver</span>
-            <span>FTC</span>
-          </div>
-
-        </article>
-
-
-        <!-- FTC 13017 -->
-        <article class="robot-card">
-
-          <div class="robot-top">
-            <span class="robot-number">FTC 13017</span>
-            <span class="robot-role">EVENT HORIZON</span>
-          </div>
-
-          <h3>FTC 13017 Event Horizon</h3>
-
-          <p>
-            Served as a programmer during the 2023–24 season. I also drove
-            the robot at the team's first competition.
-          </p>
-
-          <div class="tag-row">
-            <span>Programming</span>
-            <span>Driver</span>
-            <span>FTC</span>
-          </div>
-
-        </article>
-
-      </div>
+    <section id="robotics" class="content-section section-shell">
+      <div class="section-heading"><span>02</span><h2>Robotics</h2></div>
+      <div id="robotics-grid" class="robotics-grid"></div>
     </section>
 
-
-    <!-- PROJECTS -->
-    <section class="section projects" id="projects">
-
-      <div class="section-heading">
-        <span class="section-number">03</span>
-        <h2>Things I've Built</h2>
-      </div>
-
-      <div class="project-list">
-
-        <!-- SCOUTING -->
-        <article class="project">
-
-          <div class="project-index">01</div>
-
-          <div>
-
-            <p class="project-type">
-              ROBOTICS / SOFTWARE
-            </p>
-
-            <h3>
-              Scouting Systems
-            </h3>
-
-            <p>
-              Built and organized scouting workflows for FRC competition,
-              including forms, data collection, organization, and the systems
-              needed to turn match observations into useful strategy.
-            </p>
-
-            <p>
-              Built a custom pick list generator that utilizes custom
-              <code>.json</code> scouting data along with data from
-              The Blue Alliance and Statbotics.
-              Check it out here:
-              <a
-                href="https://obstagoon2.github.io/Pick_list_thingy/"
-                target="_blank"
-                rel="noopener">
-                Pick List Maker ↗
-              </a>
-            </p>
-
-            <div class="tag-row">
-              <span>FRC</span>
-              <span>Scouting</span>
-              <span>Data</span>
-              <span>JSON</span>
-              <span>The Blue Alliance</span>
-              <span>Statbotics</span>
-              <span>Strategy</span>
-            </div>
-
-          </div>
-
-        </article>
-
-
-        <!-- FRC OPERATIONS -->
-        <article class="project">
-
-          <div class="project-index">02</div>
-
-          <div>
-
-            <p class="project-type">
-              ROBOTICS / LEADERSHIP
-            </p>
-
-            <h3>
-              FRC Competition Operations
-            </h3>
-
-            <p>
-              Took on increasingly significant competition responsibilities
-              within FRC 1912. During the 2024–25 season I served as Drive
-              Coach. During 2025–26 I served as Vice Captain of Engineering,
-              Pit Captain, and Safety Captain at all three competitions.
-            </p>
-
-            <p>
-              My responsibilities included helping coordinate the engineering
-              team, maintaining pit operations, keeping competition tasks
-              organized, and helping the team operate safely and effectively
-              throughout events.
-            </p>
-
-            <div class="tag-row">
-              <span>FRC</span>
-              <span>Leadership</span>
-              <span>Drive Coach</span>
-              <span>Pit Operations</span>
-              <span>Safety</span>
-            </div>
-
-          </div>
-
-        </article>
-
-
-        <!-- FLYER BOX -->
-        <article class="project">
-
-          <div class="project-index">03</div>
-
-          <div>
-
-            <p class="project-type">
-              4-H / MECHANICAL DESIGN
-            </p>
-
-            <h3>
-              Flyer Dispensing Box
-            </h3>
-
-            <p>
-              As Vice President of my 4-H club, I designed and built a
-              mechanical flyer dispensing box for our outreach booth.
-              The project made it easier for visitors to take information
-              from the booth while giving the display a more interactive
-              element.
-            </p>
-
-            <p>
-              Our booth went on to win first place.
-            </p>
-
-            <div class="tag-row">
-              <span>4-H</span>
-              <span>Mechanical Design</span>
-              <span>Fabrication</span>
-              <span>Outreach</span>
-            </div>
-
-          </div>
-
-        </article>
-
-
-        <!-- ANIMATRONIC DISPLAY -->
-        <article class="project">
-
-          <div class="project-index">04</div>
-
-          <div>
-
-            <p class="project-type">
-              4-H / ENGINEERING
-            </p>
-
-            <h3>
-              Animatronic Booth Display
-            </h3>
-
-            <p>
-              As President of my 4-H club, I designed and built an animatronic
-              display for our outreach booth. The project added an interactive
-              engineering component to the booth and helped draw visitors in
-              to learn more about our club.
-            </p>
-
-            <p>
-              The booth won first place again.
-            </p>
-
-            <div class="tag-row">
-              <span>4-H</span>
-              <span>Engineering</span>
-              <span>Electronics</span>
-              <span>Animatronics</span>
-              <span>Outreach</span>
-            </div>
-
-          </div>
-
-        </article>
-
-      </div>
+    <section id="projects" class="content-section section-shell">
+      <div class="section-heading"><span>03</span><h2>Projects</h2></div>
+      <div id="projects-grid" class="projects-grid"></div>
     </section>
 
-
-    <!-- LEADERSHIP -->
-    <section class="section leadership" id="leadership">
-
-      <div class="section-heading">
-        <span class="section-number">04</span>
-        <h2>Leadership</h2>
-      </div>
-
-    <div class="leadership-timeline">
-      
-      <article class="leadership-entry">
-
-          <div class="leadership-year">
-            2026-27
-          </div>
-
-          <div class="leadership-content">
-
-            <p class="project-type">
-              FRC 1912
-            </p>
-
-            <h3>
-              Vice Captain
-            </h3>
-
-            <p>
-              Serving as Vice Captain of FRC Team 1912, helping lead different projects, and keeping the team moving toward competition. Focused on engineering, scouting, and making sure everyone had a role and knew what needed to get done.
-            </p>
-
-            <div class="tag-row">
-              <span>FRC</span>
-            </div>
-
-          </div>
-
-        </article>
-
-        <article class="leadership-entry">
-
-          <div class="leadership-year">
-            2025–26
-          </div>
-
-          <div class="leadership-content">
-
-            <p class="project-type">
-              FRC 1912
-            </p>
-
-            <h3>
-              Vice Captain of Engineering
-            </h3>
-
-            <p>
-              Helped lead the engineering side of FRC 1912 while serving as
-              Pit Captain and Safety Captain at all three competitions.
-            </p>
-
-            <div class="tag-row">
-              <span>FRC</span>
-              <span>Engineering</span>
-              <span>Pit Captain</span>
-              <span>Safety Captain</span>
-            </div>
-
-          </div>
-
-        </article>
-
-
-        <article class="leadership-entry">
-
-          <div class="leadership-year">
-            2025–26
-          </div>
-
-          <div class="leadership-content">
-
-            <p class="project-type">
-              FTC 27406
-            </p>
-
-            <h3>
-              Team Captain & Drive Coach
-            </h3>
-
-            <p>
-              Led FTC 27406 Impulse for the second season while transitioning
-              from driver to Drive Coach and taking a larger role in team
-              strategy and competition operations.
-            </p>
-
-            <div class="tag-row">
-              <span>FTC</span>
-              <span>Captain</span>
-              <span>Drive Coach</span>
-              <span>Strategy</span>
-            </div>
-
-          </div>
-
-        </article>
-
-      <article class="leadership-entry">
-
-          <div class="leadership-year">
-            2025–26
-          </div>
-
-          <div class="leadership-content">
-
-            <p class="project-type">
-              4-H
-            </p>
-
-            <h3>
-              Club President
-            </h3>
-
-            <p>
-              Served as President of my 4-H club, leading club activities,
-              outreach, projects, and participation throughout the year.
-            </p>
-
-            <div class="tag-row">
-              <span>4-H</span>
-              <span>President</span>
-              <span>Leadership</span>
-              <span>Outreach</span>
-            </div>
-
-          </div>
-
-        </article>
-
-        <article class="leadership-entry">
-
-          <div class="leadership-year">
-            2024–25
-          </div>
-
-          <div class="leadership-content">
-
-            <p class="project-type">
-              FRC 1912
-            </p>
-
-            <h3>
-              Drive Coach
-            </h3>
-
-            <p>
-              Served as Drive Coach for FRC 1912 during the 2024–25 season.
-            </p>
-
-            <div class="tag-row">
-              <span>FRC</span>
-              <span>Drive Coach</span>
-              <span>Competition</span>
-            </div>
-
-          </div>
-
-        </article>
-
-
-        <article class="leadership-entry">
-
-          <div class="leadership-year">
-            2024–25
-          </div>
-
-          <div class="leadership-content">
-
-            <p class="project-type">
-              FTC 27406
-            </p>
-
-            <h3>
-              Team Captain & Driver
-            </h3>
-
-            <p>
-              Captained FTC 27406 Impulse during its first season and served
-              as the team's driver during competitions.
-            </p>
-
-            <div class="tag-row">
-              <span>FTC</span>
-              <span>Captain</span>
-              <span>Driver</span>
-            </div>
-
-          </div>
-
-        </article>
-
-        <article class="leadership-entry">
-
-          <div class="leadership-year">
-            2024–25
-          </div>
-
-          <div class="leadership-content">
-
-            <p class="project-type">
-              4-H
-            </p>
-
-            <h3>
-              Club Vice President
-            </h3>
-
-            <p>
-              Served as Vice President and built the flyer dispensing box
-              that helped our booth earn first place.
-            </p>
-
-            <div class="tag-row">
-              <span>4-H</span>
-              <span>Vice President</span>
-              <span>Engineering</span>
-            </div>
-
-          </div>
-
-        </article>
-
-
-        <article class="leadership-entry">
-
-          <div class="leadership-year">
-            2023–24
-          </div>
-
-          <div class="leadership-content">
-
-            <p class="project-type">
-              4-H
-            </p>
-
-            <h3>
-              Club Treasurer
-            </h3>
-
-            <p>
-              Served as Treasurer while beginning my progression through
-              4-H club leadership.
-            </p>
-
-            <div class="tag-row">
-              <span>4-H</span>
-              <span>Treasurer</span>
-            </div>
-
-          </div>
-
-        </article>
-
-      </div>
+    <section id="leadership" class="content-section section-shell">
+      <div class="section-heading"><span>04</span><h2>Leadership</h2></div>
+      <div id="leadership-timeline" class="timeline"></div>
     </section>
 
-
-    <!-- 4-H COMPETITION HISTORY -->
-<section class="section fourh-history" id="fourh-history">
-
-  <div class="section-heading">
-    <span class="section-number">05</span>
-    <h2>4-H Competition History</h2>
-  </div>
-
-  <div class="fourh-intro">
-    <p>
-      My 4-H experience started in 2023 and has grown from competing in
-      shooting sports and poultry showmanship into club leadership, community
-      service, and building projects for our outreach events.
-    </p>
-  </div>
-
-  <div class="fourh-timelines">
-
-    <!-- SHOOTING SPORTS -->
-    <div class="fourh-timeline">
-
-      <div class="fourh-timeline-header">
-        <div class="fourh-icon">.22</div>
-
+    <section id="four-h" class="content-section section-shell">
+      <div class="section-heading"><span>05</span><h2>4-H Competition History</h2></div>
+      <div class="competition-grid">
         <div>
-          <p class="project-type">4-H / SHOOTING SPORTS</p>
-          <h3>Shooting Sports</h3>
-          <p>
-            .22 rifle competition history from parish and district events
-            through Southern Regional and Louisiana State competitions.
-          </p>
+          <div class="subheading"><span>SHOOTING SPORTS</span><span>4-H</span></div>
+          <div id="shooting-timeline" class="mini-timeline"></div>
         </div>
-      </div>
-
-
-      <!-- 2023 -->
-      <article class="fourh-entry">
-
-        <div class="fourh-year">
-          2023
-        </div>
-
-        <div class="fourh-entry-content">
-
-          <h4>First Year in 4-H</h4>
-
-          <ul>
-            <li>
-              <strong>5th place</strong> — .22 Rifle, East Baton Rouge Competition
-            </li>
-            <li>
-              Assisted with my club's community service events
-            </li>
-          </ul>
-
-        </div>
-
-      </article>
-
-
-      <!-- 2024 -->
-      <article class="fourh-entry">
-
-        <div class="fourh-year">
-          2024
-        </div>
-
-        <div class="fourh-entry-content">
-
-          <h4>Growing Into Competition</h4>
-
-          <ul>
-            <li>
-              <strong>4th place</strong> — .22 Rifle, East Baton Rouge Competition
-            </li>
-            <li>
-              <strong>15th individual</strong> — .22 Rifle, Southern Regional Competition
-            </li>
-            <li>
-              <strong>1st place team</strong> — .22 Rifle, Southern Regional Competition
-            </li>
-            <li>
-              <strong>32nd place</strong> — .22 Rifle, Louisiana State Competition
-            </li>
-          </ul>
-
-        </div>
-
-      </article>
-
-
-      <!-- 2025 -->
-      <article class="fourh-entry">
-
-        <div class="fourh-year">
-          2025
-        </div>
-
-        <div class="fourh-entry-content">
-
-          <h4>Regional Competition</h4>
-
-          <ul>
-            <li>
-              <strong>21st place</strong> — .22 Rifle, Southern Regional Competition
-            </li>
-            <li>
-              Led my club's team to <strong>2nd place</strong> in the
-              Achievement Day Club Challenge
-            </li>
-          </ul>
-
-        </div>
-
-      </article>
-
-
-      <!-- 2026 -->
-      <article class="fourh-entry">
-
-        <div class="fourh-year">
-          2026
-        </div>
-
-        <div class="fourh-entry-content">
-
-          <h4>Continued Competition</h4>
-
-          <ul>
-            <li>
-              <strong>10th place</strong> — .22 Rifle, Southern Regional Competition
-            </li>
-            <li>
-              <strong>32nd place</strong> — .22 Rifle, Louisiana State Competition
-            </li>
-            <li>
-              <strong>Emerald Clover Award</strong> — Achievement Day
-            </li>
-          </ul>
-
-          <p>
-            The Emerald Clover Award recognizes a 4-H student who exemplifies
-            and embodies what it means to be a 4-H student and community leader.
-          </p>
-
-        </div>
-
-      </article>
-
-    </div>
-
-
-    <!-- POULTRY -->
-    <div class="fourh-timeline">
-
-      <div class="fourh-timeline-header">
-        <div class="fourh-icon">🐔</div>
-
         <div>
-          <p class="project-type">4-H / LIVESTOCK</p>
-          <h3>Poultry Showmanship</h3>
-          <p>
-            Four years of poultry showmanship competition at parish, district,
-            and state levels.
-          </p>
+          <div class="subheading"><span>POULTRY SHOWMANSHIP</span><span>4-H</span></div>
+          <div id="poultry-timeline" class="mini-timeline"></div>
         </div>
       </div>
 
-
-      <!-- 2023 -->
-      <article class="fourh-entry">
-
-        <div class="fourh-year">
-          2023
+      <div class="four-h-lower">
+        <div>
+          <div class="subheading"><span>OTHER ACHIEVEMENTS</span><span>4-H</span></div>
+          <div id="fourh-achievements" class="achievement-list"></div>
         </div>
-
-        <div class="fourh-entry-content">
-
-          <h4>First Year</h4>
-
-          <ul>
-            <li>
-              <strong>2nd place</strong> — St. Tammany Parish Poultry Showmanship
-            </li>
-            <li>
-              <strong>3rd place</strong> — Southeast District Poultry Showmanship
-            </li>
-          </ul>
-
+        <div>
+          <div class="subheading"><span>PROJECTS</span><span>ENGINEERING / OUTREACH</span></div>
+          <div id="fourh-projects" class="project-list"></div>
         </div>
-
-      </article>
-
-
-      <!-- 2024 -->
-      <article class="fourh-entry">
-
-        <div class="fourh-year">
-          2024
-        </div>
-
-        <div class="fourh-entry-content">
-
-          <h4>Parish & District</h4>
-
-          <ul>
-            <li>
-              <strong>2nd place</strong> — St. Tammany Parish Poultry Showmanship
-            </li>
-            <li>
-              <strong>3rd place</strong> — Southeast District Poultry Showmanship
-            </li>
-            <li>
-              <strong>1st place</strong> — Expressive Arts Illustrated Talk,
-              Achievement Day
-            </li>
-          </ul>
-
-        </div>
-
-      </article>
-
-
-      <!-- 2025 -->
-      <article class="fourh-entry">
-
-        <div class="fourh-year">
-          2025
-        </div>
-
-        <div class="fourh-entry-content">
-
-          <h4>State-Level Competition</h4>
-
-          <ul>
-            <li>
-              <strong>3rd place</strong> — St. Tammany Parish Poultry Showmanship
-            </li>
-            <li>
-              <strong>3rd place</strong> — Southeast District Poultry Showmanship
-            </li>
-            <li>
-              <strong>7th place</strong> — Louisiana State Poultry Showmanship
-            </li>
-          </ul>
-
-        </div>
-
-      </article>
-
-
-      <!-- 2026 -->
-      <article class="fourh-entry">
-
-        <div class="fourh-year">
-          2026
-        </div>
-
-        <div class="fourh-entry-content">
-
-          <h4>Continued State Competition</h4>
-
-          <ul>
-            <li>
-              <strong>3rd place</strong> — St. Tammany Parish Poultry Showmanship
-            </li>
-            <li>
-              <strong>3rd place</strong> — Southeast District Poultry Showmanship
-            </li>
-            <li>
-              <strong>7th place</strong> — Louisiana State Poultry Showmanship
-            </li>
-          </ul>
-
-        </div>
-
-      </article>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- FLL / FIRST VOLUNTEERING -->
-<section class="section first-service" id="first-service">
-
-  <div class="section-heading">
-    <span class="section-number">06</span>
-    <h2>FIRST Event Experience</h2>
-  </div>
-
-  <div class="service-grid">
-
-    <article class="service-card">
-
-      <span class="service-year">2023</span>
-
-      <div>
-        <p class="project-type">FLL QUALIFIER</p>
-        <h3>Time Keeper</h3>
-
-        <p>
-          Served as a Time Keeper at an FLL Qualifier hosted by
-          FTC 13017 Event Horizon.
-        </p>
-      </div>
-
-    </article>
-
-
-    <article class="service-card">
-
-      <span class="service-year">2024</span>
-
-      <div>
-        <p class="project-type">FLL QUALIFIER</p>
-        <h3>Time Keeper</h3>
-
-        <p>
-          Served as a Time Keeper at an FLL Qualifier hosted by
-          FRC 1912 Combustion.
-        </p>
-      </div>
-
-    </article>
-
-
-    <article class="service-card">
-
-      <span class="service-year">2025</span>
-
-      <div>
-        <p class="project-type">FLL QUALIFIER</p>
-        <h3>Referee</h3>
-
-        <p>
-          Served as a referee at an FLL Qualifier hosted by
-          FRC 1912 Combustion.
-        </p>
-      </div>
-
-    </article>
-
-  </div>
-
-</section>
-
-
-    <!-- ACHIEVEMENTS -->
-    <section class="section achievements" id="achievements">
-
-      <div class="section-heading">
-        <span class="section-number">05</span>
-        <h2>Achievements</h2>
-      </div>
-
-      <div class="achievement-grid">
-
-        <div class="achievement">
-          <span class="achievement-value">2×</span>
-          <span class="achievement-title">
-            FIRST Leadership Award Finalist
-          </span>
-          <span class="achievement-detail">
-            FTC / FIRST
-          </span>
-        </div>
-
-        <div class="achievement">
-          <span class="achievement-value">
-            EMERALD
-          </span>
-          <span class="achievement-title">
-            Emerald Achievement Award
-          </span>
-          <span class="achievement-detail">
-            Parish-wide 4-H achievement
-          </span>
-        </div>
-
-        <div class="achievement">
-          <span class="achievement-value">
-            2×
-          </span>
-          <span class="achievement-title">
-            First Place 4-H Booth
-          </span>
-          <span class="achievement-detail">
-            Flyer dispenser & animatronic display
-          </span>
-        </div>
-
-        <div class="achievement">
-          <span class="achievement-value">
-            FRC
-          </span>
-          <span class="achievement-title">
-            Engineering & Competition Leadership
-          </span>
-          <span class="achievement-detail">
-            Team 1912 Combustion
-          </span>
-        </div>
-
       </div>
     </section>
 
-
-    <!-- ELSEWHERE -->
-    <section class="section activity">
-
-      <div class="section-heading">
-        <span class="section-number">06</span>
-        <h2>Elsewhere</h2>
-      </div>
-
-      <div class="activity-grid">
-
-        <a
-          class="activity-card"
-          href="https://www.chiefdelphi.com/u/zakk_j/summary"
-          target="_blank"
-          rel="noopener">
-
-          <span class="activity-icon">
-            CD
-          </span>
-
-          <div>
-            <strong>Chief Delphi</strong>
-            <p>
-              Robotics discussions, projects, build ideas, and competition
-              experience.
-            </p>
-          </div>
-
-          <span class="arrow">↗</span>
-
-        </a>
-
-
-        <a
-          class="activity-card"
-          href="https://www.linkedin.com/in/zakk-jackson/"
-          target="_blank"
-          rel="noopener">
-
-          <span class="activity-icon">
-            in
-          </span>
-
-          <div>
-            <strong>LinkedIn</strong>
-            <p>
-              Professional experience, leadership, and accomplishments.
-            </p>
-          </div>
-
-          <span class="arrow">↗</span>
-
-        </a>
-
-
-        <a
-          class="activity-card"
-          href="https://github.com/"
-          target="_blank"
-          rel="noopener">
-
-          <span class="activity-icon">
-            &lt;/&gt;
-          </span>
-
-          <div>
-            <strong>GitHub</strong>
-            <p>
-              Code, experiments, websites, and robotics software.
-            </p>
-          </div>
-
-          <span class="arrow">↗</span>
-
-        </a>
-
-      </div>
+    <section id="first-events" class="content-section section-shell">
+      <div class="section-heading"><span>06</span><h2>FIRST Event Experience</h2></div>
+      <div id="first-events-list" class="event-strip"></div>
     </section>
 
-
-    <!-- CONTACT -->
-    <section class="section contact" id="contact">
-
-      <div class="contact-box">
-
-        <p class="eyebrow">
-          LET'S BUILD SOMETHING
-        </p>
-
-        <h2>
-          Have a project worth making?
-        </h2>
-
-        <p>
-          I'm always interested in robotics, engineering, software, and
-          projects that involve figuring out how to make something work.
-        </p>
-
-        <div class="hero-links">
-
-          <a
-            class="button primary"
-            href="https://www.linkedin.com/in/zakk-jackson/"
-            target="_blank"
-            rel="noopener">
-            Find me on LinkedIn ↗
-          </a>
-
-          <a
-            class="button"
-            href="https://www.chiefdelphi.com/u/zakk_j/summary"
-            target="_blank"
-            rel="noopener">
-            Chief Delphi ↗
-          </a>
-
-        </div>
-
-      </div>
-
+    <section id="achievements" class="content-section section-shell">
+      <div class="section-heading"><span>07</span><h2>Achievements</h2></div>
+      <div id="achievements-grid" class="achievements-grid"></div>
     </section>
 
+    <section id="elsewhere" class="content-section section-shell">
+      <div class="section-heading"><span>08</span><h2>Elsewhere</h2></div>
+      <div id="elsewhere-grid" class="elsewhere-grid"></div>
+    </section>
+
+    <section id="contact" class="contact-section section-shell">
+      <div class="contact-inner">
+        <p class="eyebrow">CONTACT</p>
+        <h2>Let's build something.</h2>
+        <p>Robotics, engineering, collaboration, projects, STEM, or FIRST—if you're working on something interesting, get in touch.</p>
+        <a class="button button-primary" href="mailto:zakk@example.com">Get in touch <span>↗</span></a>
+      </div>
+    </section>
   </main>
 
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-
-    <span>
-      © <span id="year"></span> Zakk Jackson
-    </span>
-
-    <span>
-      Built with HTML, CSS & JavaScript.
-    </span>
-
+  <footer class="site-footer section-shell">
+    <span>© <span id="footer-year">2026</span> Zakk Jackson</span>
+    <span>Built with HTML / CSS / JavaScript</span>
+    <span>Hosted on GitHub Pages</span>
   </footer>
 
-
   <script src="config.js"></script>
+  <script src="data/robotics.js"></script>
+  <script src="data/projects.js"></script>
+  <script src="data/leadership.js"></script>
+  <script src="data/fourh.js"></script>
+  <script src="data/achievements.js"></script>
   <script src="script.js"></script>
-
 </body>
 </html>
